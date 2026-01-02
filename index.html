@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Productivity Rating</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Productivity Rating</h1>
+
+    <label>
+      Hours worked today:
+      <input type="number" id="hours" min="1" placeholder="Min: 1">
+    </label>
+
+    <label>
+      Tasks completed today:
+      <input type="number" id="tasks" min="0" placeholder="Min: 0">
+    </label>
+
+    <button id="calculateBtn">Calculate</button>
+  </main>
+
+  <dialog id="resultDialog">
+    <h2 id="scoreText"></h2>
+    <p id="scoreDescription"></p>
+    <button id="recalculateBtn">Recalculate</button>
+  </dialog>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
