@@ -2,13 +2,17 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+html{
+  height: 100vh;
+}
   
- body{
+body{
   background: #f4f6f8;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
 }
   
 .container{
@@ -20,45 +24,56 @@
   padding: clamp(1.7rem, 4vw, 4rem);
   border-radius: 10px;
   width: 100%;
-  max-width: 420px;
+  max-width: 650px;
+  height: auto;
   text-align: center;
   box-shadow: 0 10px 60px rgba(0,0,0,0.1);
 }
 
 .container h1{
   text-shadow: 0 5px 10px rgb(146, 144, 144);
-  font-size: clamp(1.7rem, 4vw, 3rem);
-  margin-top: 10px;
-  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  font-size: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 label{
   display: block;
-  margin-bottom: clamp(0.8rem, 2.5vw, 1.2rem);
+  margin-bottom: 2rem;
   text-align: left;
-  font-size: clamp(0.9rem, 2.5vw, 3rem);
+  font-size: 2.5rem;
 }
 
 input{
   width: 100%;
-  padding: clamp(8px, 2.5vw, 12px);
-  margin-top: 6px;
-  font-size: clamp(0.9rem, 2.5vw, 3rem);
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 2rem;
   border-radius: 6px;
   &:hover {
     background-color: #fafafa;
   }
 }
 
+#calculateBtn:disabled{
+  background-color: #EBEBF5;
+  color: #6B6B6B;
+  cursor: auto;
+  animation: none;
+  &:hover {
+    transform: translateY(0em);
+    box-shadow: 0 0 0em 0em #5e5e5e;
+  }
+}
+
 button{
   width: 100%;
-  padding: clamp(10px, 3vw, 14px);
+  padding:  14px;
   margin-top: clamp(1rem, 3vw, 1.5rem);
-  font-size: clamp(0.95rem, 3vw, 3rem);
+  font-size: 2rem;
   background: #4CAF50;
   color: #f4f6f8;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   &:hover {
     transform: translateY(-0.1em);
@@ -85,15 +100,6 @@ dialog p{
   font-size: clamp(0.95rem, 3vw, 3rem);
 }
 
-@media (min-width: 1360px) {
-  .container{
-    max-width: 500px;
-  }
-
-  dialog{
-    max-width: 420px;
-  }
-}
 @media (min-width: 1559px) {
   .container{
     max-width: 650px;

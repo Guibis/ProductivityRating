@@ -20,6 +20,16 @@ function getDescription(score) {
   return "Excellent productivity 🚀";
 }
 
+function enableBtn(){
+  if(hoursInput.value.length > 0 && tasksInput.value.length > 0){
+    calculateBtn.removeAttribute("disabled");
+    return;
+  }
+  calculateBtn.setAttribute("disabled", "");
+}
+
+hoursInput.addEventListener("input", enableBtn);
+tasksInput.addEventListener("input", enableBtn);
 
 calculateBtn.addEventListener("click", () => {
   const hours = Number(hoursInput.value);
@@ -45,4 +55,5 @@ recalculateBtn.addEventListener("click", () => {
   dialog.close();
   hoursInput.value = "";
   tasksInput.value = "";
+  calculateBtn.setAttribute("disabled", "");
 });
