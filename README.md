@@ -1,6 +1,6 @@
 # 🖩 Productivity Rating
 
-A simple and responsive productivity calculator that helps users measure their daily productivity based on **hours worked** and **tasks completed**. [Calculate here](https://guibis.github.io/ProductivityCalculator/)
+A simple and responsive productivity calculator that helps users measure their daily productivity based on **hours worked** and **tasks completed**. [Calculate here](https://guibis.github.io/ProductivityRating/)
 
 The tool generates a **score from 0 to 100** and classifies productivity as **Poor, Average, Good, or Excellent**, displaying the result in a dialog box with an option to recalculate.
 
